@@ -1,0 +1,51 @@
+<header>
+  <img src="codea-logo.png">
+</header>
+
+<article>
+    <h2 class="main-title">Desarrollando aplicaciones en Ruby on Rails</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</article>
+
+<div id="comment_area">
+  <h4>Comentarios</h4>
+
+  <ul id="comment_list">
+    <li>
+      Me gusta el post. No sé mucho acerca de programación pero me encantaría saber más.
+      <span class="author">Juan Gómez</span>
+    </li>
+  
+  <% if @comment_all%>
+  <% @comment_all.each do |comment|%>
+  <li>
+  <%= comment.comm %><span class="author"><%= comment.author %></span>
+  </li>
+    <% end %>
+  <% end %>
+
+  </ul>
+  <form id="emergente" style="display: none">
+    <textarea rows='4' cols='89' placeholder="Escribe tu comentario."></textarea>
+    <input id="autor" type="text" placeholder="Autor">
+    <button id="add_new_comment_button">Agregar Nuevo Comentario</button>
+  </form>
+  <button id="new_comment_button">Nuevo Comentario</button>
+</div>
